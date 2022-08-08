@@ -1,0 +1,10 @@
+{
+  "fullbright": {
+    "settings": {
+      "name": "Full Bright",
+      "enabled": {
+        "name": "Enable Full Bright"
+      }
+    }
+  }
+}

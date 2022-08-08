@@ -52,6 +52,10 @@ intellij {
   }
 }
 
+projectExt {
+  projectName("v1_17")
+}
+
 tasks {
   collectNatives {
     into("${project.gradle.gradleUserHomeDir}/caches/VanillaGradle/v2/natives/${minecraftGameVersion}/")

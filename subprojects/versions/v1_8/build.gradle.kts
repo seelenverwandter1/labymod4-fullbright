@@ -5,6 +5,12 @@ plugins {
 
 val minecraftGameVersion = "1.8.9"
 
+configurations {
+  all {
+    resolutionStrategy.force("com.google.guava:guava:17.0")
+  }
+}
+
 dependencies {
   labyProcessor()
   labyApi("v1_8")
@@ -43,4 +49,8 @@ intellij {
       javaVersion(javaVersion as String)
     }
   }
+}
+
+projectExt {
+  projectName("v1_8")
 }

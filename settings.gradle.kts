@@ -1,6 +1,6 @@
-rootProject.name = "addon-template"
+rootProject.name = "fullbright"
 
-includeBuild("build-logic")
+includeBuild("laby-build-logic")
 
 sequenceOf("api", "core").forEach {
   includeProject(it)
