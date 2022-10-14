@@ -78,7 +78,7 @@ tasks {
     fun getPackage(name: String): String {
       return "org.burgerbude.labymod.addons.${rootProject.name}.$name.mixins";
     }
-    relocate(getPackage("v1_17"), getPackage("v1_18"))
+    relocate(getPackage("v1_17"), getPackage("v1_19"))
     relocate(getPackage("v1_18"), getPackage("v1_19"))
   }
 
