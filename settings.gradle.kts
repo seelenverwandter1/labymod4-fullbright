@@ -2,12 +2,30 @@ rootProject.name = "fullbright"
 
 includeBuild("laby-build-logic")
 
-sequenceOf("api", "core").forEach {
-  includeProject(it)
+pluginManagement {
+  val labyGradlePluginVersion = "0.3.7"
+  plugins {
+    id("net.labymod.gradle") version (labyGradlePluginVersion)
+  }
+
+  buildscript {
+    repositories {
+      maven("https://dist.labymod.net/api/v1/maven/release/")
+      maven("https://repo.spongepowered.org/repository/maven-public")
+      mavenCentral()
+      mavenLocal()
+    }
+
+    dependencies {
+      classpath("net.labymod.gradle", "addon", labyGradlePluginVersion)
+    }
+  }
 }
 
-sequenceOf("8", "17", "18", "19").forEach {
-  includeProject("versions:v1_$it")
+plugins.apply("net.labymod.gradle")
+
+sequenceOf("api", "core").forEach {
+  includeProject(it)
 }
 
 fun includeProject(path: String) {

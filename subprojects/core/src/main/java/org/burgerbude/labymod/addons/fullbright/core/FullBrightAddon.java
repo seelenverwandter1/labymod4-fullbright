@@ -19,14 +19,14 @@ package org.burgerbude.labymod.addons.fullbright.core;
 
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.event.Subscribe;
-import net.labymod.api.models.addon.annotation.AddonListener;
+import net.labymod.api.models.addon.annotation.AddonMain;
 import org.burgerbude.labymod.addons.fullbright.core.configuration.FullBrightConfiguration;
 import org.burgerbude.labymod.addons.fullbright.core.event.UpdateLightmapTextureEvent;
 
 import javax.inject.Singleton;
 
 @Singleton
-@AddonListener
+@AddonMain
 public class FullBrightAddon extends LabyAddon<FullBrightConfiguration> {
 
 

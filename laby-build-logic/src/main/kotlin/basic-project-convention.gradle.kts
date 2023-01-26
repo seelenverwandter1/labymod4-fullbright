@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "org.burgerbude.labymod.addons"
-version = System.getenv().getOrDefault("VERSION", "0.1.0")
+//version = System.getenv().getOrDefault("VERSION", "0.1.0")
 
 repositories {
   mavenCentral()
@@ -19,9 +19,10 @@ dependencies {
 }
 
 tasks {
-
   compileJava {
     options.encoding = "utf-8"
+    targetCompatibility = JavaVersion.VERSION_1_8.toString()
+    sourceCompatibility = JavaVersion.VERSION_1_8.toString()
   }
 
   getByName<Test>("test") {
