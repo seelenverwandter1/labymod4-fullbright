@@ -16,7 +16,7 @@ labyMod {
   }
 
   minecraft {
-    registerVersions("1.8.9", "1.17.1", "1.18.2", "1.19.2", "1.19.3", "23w04a") { version, provider ->
+    registerVersions("1.8.9", "1.17.1", "1.18.2", "1.19.2", "1.19.3", "23w05a") { version, provider ->
       configureRun(provider, version)
     }
 
@@ -29,7 +29,7 @@ labyMod {
 
   addonDev {
     //localRelease()
-    snapshotRelease()
+    internalRelease()
   }
 }
 
