@@ -45,7 +45,7 @@ public class MixinLightTexture {
 
   @Inject(method = "updateLightTexture", at = @At("HEAD"), cancellable = true)
   private void fullbright$updateLightTexture(float v, CallbackInfo ci) {
-    final var event = Laby.fireEvent(new UpdateLightmapTextureEvent());
+    final UpdateLightmapTextureEvent event = Laby.fireEvent(new UpdateLightmapTextureEvent());
     if (event.isCancelled()) {
       if (!this.fullbright$updated) {
         this.fullbright$writeWhiteTexture();
