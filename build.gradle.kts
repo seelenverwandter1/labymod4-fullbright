@@ -16,7 +16,7 @@ labyMod {
   }
 
   minecraft {
-    registerVersions("1.8.9", "1.12.2", "1.16.5", "1.17.1", "1.18.2", "1.19.2", "1.19.3", "1.19.4") { version, provider ->
+    registerVersions("1.8.9", "1.12.2", "1.16.5", "1.17.1", "1.18.2", "1.19.2", "1.19.3", "1.19.4", "1.20") { version, provider ->
       configureRun(provider, version)
     }
 
@@ -29,7 +29,7 @@ labyMod {
 
   addonDev {
     //localRelease()
-    internalRelease()
+    snapshotRelease()
   }
 }
 
@@ -47,14 +47,6 @@ fun configureRun(provider: net.labymod.gradle.core.minecraft.provider.VersionPro
   }
 
   provider.javaVersion = when (gameVersion) {
-    "1.8.9", "1.12.2", "1.16.5" -> {
-      JavaVersion.VERSION_1_8
-    }
-
-    "1.17.1" -> {
-      JavaVersion.VERSION_16
-    }
-
     else -> {
       JavaVersion.VERSION_17
     }
@@ -85,6 +77,16 @@ subprojects {
   license {
     header(rootProject.file("LICENSE-HEADER.txt"))
     newLine.set(true)
+  }
+
+  java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+  }
+
+  tasks.compileJava {
+    sourceCompatibility = JavaVersion.VERSION_17.toString()
+    targetCompatibility = JavaVersion.VERSION_17.toString()
   }
 
 }
