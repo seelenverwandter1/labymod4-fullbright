@@ -23,7 +23,7 @@ jobs :
           java-version : '17'
       - name : Grant execute permission for gradlew
         run : chmod +x gradlew
-      - name : Create named jar
+      - name : Create addon jar
         run : ./gradlew build --full-stacktrace
       - name : Upload Artifact
         uses : actions/upload-artifact@v3
