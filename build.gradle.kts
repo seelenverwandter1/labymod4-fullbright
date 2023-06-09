@@ -78,15 +78,4 @@ subprojects {
     header(rootProject.file("LICENSE-HEADER.txt"))
     newLine.set(true)
   }
-
-  java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-  }
-
-  tasks.compileJava {
-    sourceCompatibility = JavaVersion.VERSION_17.toString()
-    targetCompatibility = JavaVersion.VERSION_17.toString()
-  }
-
 }

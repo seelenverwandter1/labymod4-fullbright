@@ -1,5 +1,5 @@
 dependencies {
-  apiProject(rootProject, "api")
+  api(project(":api"))
 }
 
 java {

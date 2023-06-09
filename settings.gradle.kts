@@ -25,23 +25,5 @@ pluginManagement {
 plugins.apply("net.labymod.gradle")
 
 sequenceOf("api", "core").forEach {
-  includeProject(it)
-}
-
-fun includeProject(path: String) {
-  var projectPath = path;
-  if (projectPath.contains(":")) {
-    projectPath = projectPath.substring(projectPath.lastIndexOf(':') + 1, projectPath.length)
-  }
-
-  include(projectPath)
-  findProject(":$projectPath")?.apply {
-    projectDir = file("subprojects/${path.replace(":", "/")}")
-    if (projectDir.exists().not()) {
-      projectDir.mkdirs()
-    }
-
-
-    name = rootProject.name + "-" + projectPath
-  }
+  include(":$it")
 }
