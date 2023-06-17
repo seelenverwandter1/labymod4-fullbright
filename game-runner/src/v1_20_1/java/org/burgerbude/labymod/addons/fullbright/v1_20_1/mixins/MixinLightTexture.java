@@ -15,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.burgerbude.labymod.addons.fullbright.v1_20.mixins;
+package org.burgerbude.labymod.addons.fullbright.v1_20_1.mixins;
 
 import com.mojang.blaze3d.platform.NativeImage;
 import net.labymod.api.Laby;
