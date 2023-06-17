@@ -10,7 +10,7 @@ repositories {
 }
 
 java {
-  javaVersion(JavaVersion.VERSION_1_8)
+  javaVersion(JavaVersion.VERSION_17)
 }
 
 dependencies {
@@ -21,8 +21,8 @@ dependencies {
 tasks {
   compileJava {
     options.encoding = "utf-8"
-    targetCompatibility = JavaVersion.VERSION_1_8.toString()
-    sourceCompatibility = JavaVersion.VERSION_1_8.toString()
+    targetCompatibility = JavaVersion.VERSION_17.toString()
+    sourceCompatibility = JavaVersion.VERSION_17.toString()
   }
 
   getByName<Test>("test") {
