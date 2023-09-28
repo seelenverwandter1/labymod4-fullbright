@@ -15,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package java.org.burgerbude.labymod.addons.fullbright.v1_16_5.mixins;
+package org.burgerbude.labymod.addons.fullbright.v1_20_2.mixins;
 
 import com.mojang.blaze3d.platform.NativeImage;
 import net.labymod.api.Laby;
@@ -45,7 +45,7 @@ public class MixinLightTexture {
 
   @Inject(method = "updateLightTexture", at = @At("HEAD"), cancellable = true)
   private void fullbright$updateLightTexture(float v, CallbackInfo ci) {
-    final UpdateLightmapTextureEvent event = Laby.fireEvent(new UpdateLightmapTextureEvent());
+    final var event = Laby.fireEvent(new UpdateLightmapTextureEvent());
     if (event.isCancelled()) {
       if (!this.fullbright$updated) {
         this.fullbright$writeWhiteTexture();

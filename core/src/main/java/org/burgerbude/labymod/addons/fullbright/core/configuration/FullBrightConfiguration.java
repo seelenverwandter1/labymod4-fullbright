@@ -26,7 +26,7 @@ import net.labymod.api.configuration.loader.property.ConfigProperty;
 @ConfigName("settings")
 public class FullBrightConfiguration extends AddonConfig implements ConfigAccessor {
 
-  @SwitchSetting
+  @SwitchSetting(hotkey = true)
   private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(false);
 
   @Override
