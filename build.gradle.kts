@@ -12,6 +12,7 @@ labyMod {
     namespace = "fullbright"
     displayName = "Full Bright"
     author = "BurgerbudeORG"
+    minecraftVersion = "*"
     version = System.getenv().getOrDefault("VERSION", "0.0.1")
   }
 
@@ -27,7 +28,8 @@ labyMod {
             "1.19.4",
             "1.20.1",
             "1.20.2",
-            "1.20.4"
+            "1.20.4",
+            "1.20.5"
     ) { version, provider ->
       configureRun(provider, version)
     }
